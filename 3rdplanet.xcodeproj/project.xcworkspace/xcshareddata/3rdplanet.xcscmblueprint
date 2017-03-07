@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "500F8BE312F7491ADC9EAE90ADE2F498231AD7BC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8FD5DEBA051CE2596AC76DE4DADE2A34FAB0A101" : 9223372036854775807,
+    "500F8BE312F7491ADC9EAE90ADE2F498231AD7BC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "50071786-FD04-4162-A787-80C80300405D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8FD5DEBA051CE2596AC76DE4DADE2A34FAB0A101" : "..\/..\/..\/Downloads\/Timeline",
+    "500F8BE312F7491ADC9EAE90ADE2F498231AD7BC" : "3rdplanet\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "3rdplanet",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "3rdplanet.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zeuscaballero\/3rdplanet.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "500F8BE312F7491ADC9EAE90ADE2F498231AD7BC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/GSwifty\/Timeline.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8FD5DEBA051CE2596AC76DE4DADE2A34FAB0A101"
+    }
+  ]
+}

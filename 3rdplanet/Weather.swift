@@ -46,13 +46,13 @@ struct Weather {
         
         let conditions = weatherArray.flatMap { $0[Weather.kDescription] }
         
-        self.temperature = Int(temperatureInKelvin * (9/5) - 459.67)
+        self.temperature = Int(temperatureInKelvin - 270)*9/5 + 32
         self.city = city
         self.conditions = conditions as! [String]
         self.humidity = humidity
         self.clouds = clouds
-        self.tempHigh = Int(tempHigh * (9/5) - 459.67)
-        self.tempLow = Int(tempLow * (9/5) - 459.67)
+        self.tempHigh = Int(tempHigh * (9/5) - 459.67) + 10
+        self.tempLow = Int(tempLow * (9/5) - 459.67) - 5
     }
 }
 

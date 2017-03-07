@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0AB25071E6F3CE500EC6CF7 /* Material.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0AB25061E6F3CE500EC6CF7 /* Material.framework */; };
 		C0BDBE961E4A34110037C942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDBE951E4A34110037C942 /* AppDelegate.swift */; };
 		C0BDBE9B1E4A34110037C942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0BDBE991E4A34110037C942 /* Main.storyboard */; };
 		C0BDBE9D1E4A34110037C942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0BDBE9C1E4A34110037C942 /* Assets.xcassets */; };
@@ -15,9 +16,15 @@
 		C0BDBECB1E4A7FAB0037C942 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDBECA1E4A7FAB0037C942 /* NetworkController.swift */; };
 		C0BDBED01E4B85D00037C942 /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDBECF1E4B85CF0037C942 /* WeatherController.swift */; };
 		C0BDBED21E4B8A830037C942 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDBED11E4B8A830037C942 /* WeatherViewController.swift */; };
+		C0FE03601E4D5A01007ED30C /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE035F1E4D5A01007ED30C /* CloudKitManager.swift */; };
+		C0FE03661E4D5AF2007ED30C /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE03651E4D5AF2007ED30C /* CloudKitSyncable.swift */; };
+		C0FE036B1E4D5D54007ED30C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FE036A1E4D5D54007ED30C /* CloudKit.framework */; };
+		C0FE036D1E4D6BDC007ED30C /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE036C1E4D6BDC007ED30C /* FeedTableViewController.swift */; };
+		C0FE036F1E4D7391007ED30C /* FeedDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE036E1E4D7391007ED30C /* FeedDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0AB25061E6F3CE500EC6CF7 /* Material.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Material.framework; path = Carthage/Build/iOS/Material.framework; sourceTree = "<group>"; };
 		C0BDBE921E4A34110037C942 /* 3rdplanet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3rdplanet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0BDBE951E4A34110037C942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0BDBE9A1E4A34110037C942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +35,12 @@
 		C0BDBECA1E4A7FAB0037C942 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		C0BDBECF1E4B85CF0037C942 /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		C0BDBED11E4B8A830037C942 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		C0FE035F1E4D5A01007ED30C /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		C0FE03651E4D5AF2007ED30C /* CloudKitSyncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
+		C0FE03681E4D5CDA007ED30C /* 3rdplanet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 3rdplanet.entitlements; sourceTree = "<group>"; };
+		C0FE036A1E4D5D54007ED30C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C0FE036C1E4D6BDC007ED30C /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		C0FE036E1E4D7391007ED30C /* FeedDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FE036B1E4D5D54007ED30C /* CloudKit.framework in Frameworks */,
+				C0AB25071E6F3CE500EC6CF7 /* Material.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +61,7 @@
 			children = (
 				C0BDBE941E4A34110037C942 /* 3rdplanet */,
 				C0BDBE931E4A34110037C942 /* Products */,
+				C0FE03691E4D5D54007ED30C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +76,12 @@
 		C0BDBE941E4A34110037C942 /* 3rdplanet */ = {
 			isa = PBXGroup;
 			children = (
+				C0FE03681E4D5CDA007ED30C /* 3rdplanet.entitlements */,
 				C0BDBE951E4A34110037C942 /* AppDelegate.swift */,
+				C0FE03671E4D5C33007ED30C /* CloudKitManager */,
 				C0BDBE991E4A34110037C942 /* Main.storyboard */,
+				C0FE036C1E4D6BDC007ED30C /* FeedTableViewController.swift */,
+				C0FE036E1E4D7391007ED30C /* FeedDetailTableViewController.swift */,
 				C0BDBED11E4B8A830037C942 /* WeatherViewController.swift */,
 				C0BDBEA71E4A444A0037C942 /* Weather.swift */,
 				C0BDBECF1E4B85CF0037C942 /* WeatherController.swift */,
@@ -71,6 +91,24 @@
 				C0BDBEA11E4A34110037C942 /* Info.plist */,
 			);
 			path = 3rdplanet;
+			sourceTree = "<group>";
+		};
+		C0FE03671E4D5C33007ED30C /* CloudKitManager */ = {
+			isa = PBXGroup;
+			children = (
+				C0FE035F1E4D5A01007ED30C /* CloudKitManager.swift */,
+				C0FE03651E4D5AF2007ED30C /* CloudKitSyncable.swift */,
+			);
+			name = CloudKitManager;
+			sourceTree = "<group>";
+		};
+		C0FE03691E4D5D54007ED30C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0AB25061E6F3CE500EC6CF7 /* Material.framework */,
+				C0FE036A1E4D5D54007ED30C /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +145,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = J5HBDYC8AZ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -148,6 +194,10 @@
 			files = (
 				C0BDBEA81E4A444A0037C942 /* Weather.swift in Sources */,
 				C0BDBED21E4B8A830037C942 /* WeatherViewController.swift in Sources */,
+				C0FE03601E4D5A01007ED30C /* CloudKitManager.swift in Sources */,
+				C0FE036D1E4D6BDC007ED30C /* FeedTableViewController.swift in Sources */,
+				C0FE036F1E4D7391007ED30C /* FeedDetailTableViewController.swift in Sources */,
+				C0FE03661E4D5AF2007ED30C /* CloudKitSyncable.swift in Sources */,
 				C0BDBE961E4A34110037C942 /* AppDelegate.swift in Sources */,
 				C0BDBED01E4B85D00037C942 /* WeatherController.swift in Sources */,
 				C0BDBECB1E4A7FAB0037C942 /* NetworkController.swift in Sources */,
@@ -273,10 +323,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 3rdplanet/3rdplanet.entitlements;
 				DEVELOPMENT_TEAM = J5HBDYC8AZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = 3rdplanet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.justzeus.-rdplanet";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justzeus.3rdplanet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -286,10 +341,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 3rdplanet/3rdplanet.entitlements;
 				DEVELOPMENT_TEAM = J5HBDYC8AZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = 3rdplanet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.justzeus.-rdplanet";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justzeus.3rdplanet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
