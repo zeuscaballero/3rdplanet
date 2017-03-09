@@ -43,7 +43,7 @@ class CloudKitManager {
                 self.fetchRecord(withID: recordID, completion: completion)
             }
         }
-    } // If Finn is logged in on his iPhone, this is going to use his recordID (FN 2817) to fetch his record
+    }
     
     
     func fetchUsername(for recordID: CKRecordID,
@@ -68,7 +68,7 @@ class CloudKitManager {
         }
         
         CKContainer.default().add(operation)
-    } // From FN 2817, we get 'Finn'
+    } 
     
     
     func fetchAllDiscoverableUsers(completion: @escaping ((_ userInfoRecords: [CKUserIdentity]?) -> Void) = { _ in }) {
@@ -88,7 +88,7 @@ class CloudKitManager {
         }
         
         CKContainer.default().add(operation)
-    } // Get all the storm troopers
+    }
     
     
     // MARK: - Fetch Records
@@ -99,7 +99,7 @@ class CloudKitManager {
             
             completion?(record, error)
         }
-    } // Bring back the record for whatever item has that ID (starship blaster, trooper, trooper's gun, etc)
+    }
     
     func fetchRecordsWithType(_ type: String,
                               predicate: NSPredicate = NSPredicate(value: true),
@@ -122,7 +122,7 @@ class CloudKitManager {
         queryCompletionBlock = { (queryCursor: CKQueryCursor?, error: Error?) -> Void in
             
             if let queryCursor = queryCursor {
-                // there are more results, go fetch them
+                
                 
                 let continuedQueryOperation = CKQueryOperation(cursor: queryCursor)
                 continuedQueryOperation.recordFetchedBlock = perRecordBlock
@@ -137,7 +137,7 @@ class CloudKitManager {
         queryOperation.queryCompletionBlock = queryCompletionBlock
         
         self.publicDatabase.add(queryOperation)
-    } // Bring back all the records for the specified type (all trooper records, all starship blaster records, all trooper gun record, etc.)
+    }
     
     func fetchCurrentUserRecords(_ type: String, completion: ((_ records: [CKRecord]?, _ error: Error?) -> Void)?) {
         
@@ -150,7 +150,7 @@ class CloudKitManager {
                 self.fetchRecordsWithType(type, predicate: predicate, recordFetchedBlock: nil, completion: completion)
             }
         }
-    } // Retrieve the logged in user's record, and then all of the records that belong to that specific user --> Get Finn's record and then get all of the records associated with him (gun record, helmet record, etc.)
+    }
     
     func fetchRecordsFromDateRange(_ type: String, fromDate: Date, toDate: Date, completion: ((_ records: [CKRecord]?, _ error: Error?) -> Void)?) {
         
@@ -163,7 +163,7 @@ class CloudKitManager {
             
             completion?(records, error)
         }
-    } // Get all the records that were created between a start and end date (if you want the old stormtrooper helmet records, you might use this)
+    }
     
     
     // MARK: - Delete
@@ -173,7 +173,7 @@ class CloudKitManager {
         publicDatabase.delete(withRecordID: recordID) { (recordID, error) in
             completion?(recordID, error)
         }
-    } // The record with the specified will be DESTROYED
+    }
     
     func deleteRecordsWithID(_ recordIDs: [CKRecordID], completion: ((_ records: [CKRecord]?, _ recordIDs: [CKRecordID]?, _ error: Error?) -> Void)?) {
         
@@ -183,7 +183,7 @@ class CloudKitManager {
         operation.modifyRecordsCompletionBlock = completion
         
         publicDatabase.add(operation)
-    } // Find the younglings for these IDs, and kill their records
+    }
     
     
     // MARK: - Save and Modify
@@ -215,7 +215,7 @@ class CloudKitManager {
         }
         
         publicDatabase.add(operation)
-    } // Updating records if Finn went to the dentist, update his dental record.
+    }
     
     
     // MARK: - Subscriptions
@@ -284,7 +284,7 @@ class CloudKitManager {
                 self.handleCloudKitUnavailable(accountStatus, error: error)
             }
         }
-    } // Is CloudKit available?
+    }
     
     func handleCloudKitUnavailable(_ accountStatus: CKAccountStatus, error:Error?) {
         
@@ -305,7 +305,7 @@ class CloudKitManager {
         }
         
         displayCloudKitNotAvailableError(errorText)
-    } // Prepare our excuse for why it's not working
+    }
     
     func displayCloudKitNotAvailableError(_ errorText: String) {
         
@@ -323,7 +323,7 @@ class CloudKitManager {
                 rootViewController.present(alertController, animated: true, completion: nil)
             }
         })
-    } // Give our excuse
+    }
     
     
     // MARK: - CloudKit Discoverability
@@ -342,7 +342,7 @@ class CloudKitManager {
                 self.handleCloudKitPermissionStatus(permissionStatus, error: error)
             }
         }
-    } // Can you come out and play? Are you available?
+    }
     
     func handleCloudKitPermissionStatus(_ permissionStatus: CKApplicationPermissionStatus, error:Error?) {
         
@@ -367,7 +367,7 @@ class CloudKitManager {
             
             displayCloudKitPermissionsNotGrantedError(errorText)
         }
-    } // Find out Y/N. If N, prepare excuse
+    }
     
     func displayCloudKitPermissionsNotGrantedError(_ errorText: String) {
         
@@ -386,5 +386,5 @@ class CloudKitManager {
             }
         })
     }
-} // Give the excuse
+}
 

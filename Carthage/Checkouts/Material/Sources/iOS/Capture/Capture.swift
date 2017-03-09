@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.com>.
+ * Copyright (C) 2015 - 2017, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.com>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -37,7 +37,7 @@ public enum CaptureMode: Int {
 	case video
 }
 
-private var CaptureAdjustingExposureContext: UInt8 = 0
+fileprivate var CaptureAdjustingExposureContext: UInt8 = 0
 
 @objc(CapturePreset)
 public enum CapturePreset: Int {
