@@ -95,6 +95,7 @@ class PostDetailTableViewController: UITableViewController {
             
             let _ = PostController.sharedController.addComment(post: post, commentText: comment)
             self.tableView.reloadData()
+            
         }
         
         alertController.addAction(cancelAction)

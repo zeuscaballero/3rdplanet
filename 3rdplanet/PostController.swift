@@ -78,6 +78,25 @@ class PostController {
         }
     }
     
+    
+    func deletePost(post: Post) {
+        let recordID = post.cloudKitRecordID
+        
+        let publicDatabase = CKContainer.default().publicCloudDatabase
+        publicDatabase.delete(withRecordID: recordID!) { (recordID, error) -> Void in
+            guard let recordID = recordID else {
+                print("Error deleting record:", error!)
+                return
+            }
+            print("Successfully deleted record: ",
+                  recordID.recordName)
+        }
+        
+        
+    }
+
+    
+    
     func addComment(post: Post, commentText: String, completion: @escaping ((Comment) -> Void) = { _ in }) -> Comment {
         let comment = Comment(post: post, text: commentText)
         post.comments.append(comment)

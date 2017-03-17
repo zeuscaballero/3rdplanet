@@ -7,17 +7,32 @@
 //
 
 import UIKit
+import CloudKit
 
 class PostListTableViewController: UITableViewController, UISearchResultsUpdating {
     
     var searchController = UISearchController()
     
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    let publicDatabase = CKContainer.default().publicCloudDatabase
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        requestFullSync()
+        
+        self.activityIndicator.center = self.view.center
+        self.activityIndicator.hidesWhenStopped = true
+        self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        self.view.addSubview(self.activityIndicator)
+        
+        self.activityIndicator.startAnimating()
+
+        
         setupSearchController()
         
-        requestFullSync()
         
         if tableView.numberOfRows(inSection: 0) > 0 {
             tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
@@ -28,10 +43,17 @@ class PostListTableViewController: UITableViewController, UISearchResultsUpdatin
         
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         imageView.contentMode = .scaleAspectFit
-        let image = #imageLiteral(resourceName: "Globe")
+        let image = #imageLiteral(resourceName: "geography (1)")
         imageView.image = image
         navigationItem.titleView = imageView
         
+    }
+    
+    func deleteRecordWithID(_ recordID: CKRecordID, completion: ((_ recordID: CKRecordID?, _ error: Error?) -> Void)?) {
+        
+        publicDatabase.delete(withRecordID: recordID) { (recordID, error) in
+            completion?(recordID, error)
+        }
     }
     
     
@@ -49,11 +71,30 @@ class PostListTableViewController: UITableViewController, UISearchResultsUpdatin
         return cell ?? UITableViewCell()
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == UITableViewCellEditingStyle.delete){
+            let post = PostController.sharedController.posts[indexPath.row]
+            
+            PostController.sharedController.deletePost(post: post)
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+        
+            // take post.recordID and remove it from cloudkit
+            // update your PostController.shared.posts to remove the post object
+            
+    }
+  
+    
     //MARK: - Actions
     
     
     func postsChanged(_ notification: Notification) {
         tableView.reloadData()
+         self.activityIndicator.stopAnimating()
     }
     
     func setupSearchController() {
@@ -64,6 +105,7 @@ class PostListTableViewController: UITableViewController, UISearchResultsUpdatin
         searchController.searchResultsUpdater = self
         searchController.searchBar.sizeToFit()
         searchController.hidesNavigationBarDuringPresentation = true
+        searchController.searchBar.barTintColor = .white
         tableView.tableHeaderView = searchController.searchBar
         
         definesPresentationContext = true
@@ -89,13 +131,10 @@ class PostListTableViewController: UITableViewController, UISearchResultsUpdatin
     
     func requestFullSync(_ completion: (() -> Void)? = nil) {
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        PostController.sharedController.performFullSync {
-            
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-            
+         PostController.sharedController.performFullSync {
+           
             completion?()
+            
         }
     }
     

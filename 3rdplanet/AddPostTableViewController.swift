@@ -21,7 +21,6 @@ class AddPostTableViewController: UITableViewController {
     }
     
     @IBAction func addPostButtonTapped(_ sender: Any) {
-        
         if let image = image,
             let caption = commentTextField.text, !caption.isEmpty {
             
@@ -39,6 +38,7 @@ class AddPostTableViewController: UITableViewController {
             present(alertController, animated: true, completion: nil)
         }
         
+
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {

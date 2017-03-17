@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Weather {
     
@@ -20,6 +21,8 @@ struct Weather {
     static private let kAll = "all"
     static private let kHigh = "temp_max"
     static private let kLow = "temp_min"
+    static private let kImage = "icon"
+    fileprivate let kImageURL = URL(string: "http://openweathermap.org/img/w/")
 
     
     let city : String
@@ -29,12 +32,18 @@ struct Weather {
     let clouds: Int
     let tempHigh: Int
     let tempLow: Int
+   let weatherImage: String
+    var imageURL: URL? {
+      return kImageURL?.appendingPathComponent("\(weatherImage).png")
+    }
     
     
     
     init?(dictionary: [String:AnyObject]) {
         guard let city = dictionary[Weather.kCity] as? String,
             let weatherArray = dictionary[Weather.kWeatherArray] as? [[String:AnyObject]],
+            let iconDictionary = weatherArray[0] as? [String:AnyObject],
+            let weatherImage = iconDictionary[Weather.kImage] as? String,
             let mainDictionary = dictionary[Weather.kMain] as? [String:AnyObject],
             let cloudsDictionary = dictionary[Weather.kClouds] as? [String:AnyObject],
             let temperatureInKelvin = mainDictionary[Weather.kTemp] as? Double,
@@ -42,17 +51,19 @@ struct Weather {
             let humidity = mainDictionary[Weather.kHumidity] as? Int,
             let tempHigh = mainDictionary[Weather.kHigh] as? Double,
            let tempLow = mainDictionary[Weather.kLow] as? Double
+            
         else { return nil }
         
         let conditions = weatherArray.flatMap { $0[Weather.kDescription] }
         
         self.temperature = Int(temperatureInKelvin - 270)*9/5 + 32
         self.city = city
+        self.weatherImage = weatherImage
         self.conditions = conditions as! [String]
         self.humidity = humidity
         self.clouds = clouds
-        self.tempHigh = Int(tempHigh * (9/5) - 459.67) + 10
+        self.tempHigh = Int(tempHigh * (9/5) - 459.67) + 5
         self.tempLow = Int(tempLow * (9/5) - 459.67) - 5
     }
-}
 
+}

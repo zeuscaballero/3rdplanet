@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C06E17091E76F6F800CD0214 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E17081E76F6F800CD0214 /* LocationManager.swift */; };
 		C0AB250F1E6F5D1B00EC6CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AB250E1E6F5D1B00EC6CF7 /* Main.storyboard */; };
 		C0AB25151E6F602800EC6CF7 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB25141E6F602800EC6CF7 /* Comment.swift */; };
 		C0AB25171E6F604B00EC6CF7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB25161E6F604B00EC6CF7 /* Post.swift */; };
@@ -19,6 +20,7 @@
 		C0AB25261E70CA2300EC6CF7 /* PostDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB25251E70CA2300EC6CF7 /* PostDetailTableViewController.swift */; };
 		C0AB25281E70CA3200EC6CF7 /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB25271E70CA3200EC6CF7 /* PostListTableViewController.swift */; };
 		C0AB252B1E70CB1600EC6CF7 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB252A1E70CB1500EC6CF7 /* PostController.swift */; };
+		C0AB25301E727BE300EC6CF7 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AB252F1E727BE300EC6CF7 /* Keys.swift */; };
 		C0BDBE961E4A34110037C942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDBE951E4A34110037C942 /* AppDelegate.swift */; };
 		C0BDBE9D1E4A34110037C942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0BDBE9C1E4A34110037C942 /* Assets.xcassets */; };
 		C0BDBEA01E4A34110037C942 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0BDBE9E1E4A34110037C942 /* LaunchScreen.storyboard */; };
@@ -26,12 +28,14 @@
 		C0BDBECB1E4A7FAB0037C942 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDBECA1E4A7FAB0037C942 /* NetworkController.swift */; };
 		C0BDBED01E4B85D00037C942 /* WeatherController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDBECF1E4B85CF0037C942 /* WeatherController.swift */; };
 		C0BDBED21E4B8A830037C942 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BDBED11E4B8A830037C942 /* WeatherViewController.swift */; };
+		C0C343091E7A2B84000CC2CF /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C343081E7A2B84000CC2CF /* ImageController.swift */; };
 		C0FE03601E4D5A01007ED30C /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE035F1E4D5A01007ED30C /* CloudKitManager.swift */; };
 		C0FE03661E4D5AF2007ED30C /* CloudKitSyncable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FE03651E4D5AF2007ED30C /* CloudKitSyncable.swift */; };
 		C0FE036B1E4D5D54007ED30C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FE036A1E4D5D54007ED30C /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C06E17081E76F6F800CD0214 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C0AB250E1E6F5D1B00EC6CF7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C0AB25141E6F602800EC6CF7 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		C0AB25161E6F604B00EC6CF7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 		C0AB25251E70CA2300EC6CF7 /* PostDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailTableViewController.swift; sourceTree = "<group>"; };
 		C0AB25271E70CA3200EC6CF7 /* PostListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
 		C0AB252A1E70CB1500EC6CF7 /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		C0AB252F1E727BE300EC6CF7 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		C0BDBE921E4A34110037C942 /* 3rdplanet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3rdplanet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0BDBE951E4A34110037C942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0BDBE9C1E4A34110037C942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +58,7 @@
 		C0BDBECA1E4A7FAB0037C942 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		C0BDBECF1E4B85CF0037C942 /* WeatherController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherController.swift; sourceTree = "<group>"; };
 		C0BDBED11E4B8A830037C942 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		C0C343081E7A2B84000CC2CF /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		C0FE035F1E4D5A01007ED30C /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		C0FE03651E4D5AF2007ED30C /* CloudKitSyncable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitSyncable.swift; sourceTree = "<group>"; };
 		C0FE03681E4D5CDA007ED30C /* 3rdplanet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 3rdplanet.entitlements; sourceTree = "<group>"; };
@@ -71,11 +77,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C06E17071E76F68900CD0214 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				C06E17081E76F6F800CD0214 /* LocationManager.swift */,
+			);
+			name = Location;
+			path = 3rdplanet;
+			sourceTree = "<group>";
+		};
 		C0AB25101E6F5ED000EC6CF7 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
 				C0BDBED11E4B8A830037C942 /* WeatherViewController.swift */,
 				C0BDBEA71E4A444A0037C942 /* Weather.swift */,
+				C0C343081E7A2B84000CC2CF /* ImageController.swift */,
 				C0BDBECF1E4B85CF0037C942 /* WeatherController.swift */,
 				C0BDBECA1E4A7FAB0037C942 /* NetworkController.swift */,
 			);
@@ -86,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				C0AB250E1E6F5D1B00EC6CF7 /* Main.storyboard */,
+				C0AB252F1E727BE300EC6CF7 /* Keys.swift */,
 				C0BDBE9C1E4A34110037C942 /* Assets.xcassets */,
 				C0BDBE9E1E4A34110037C942 /* LaunchScreen.storyboard */,
 				C0BDBEA11E4A34110037C942 /* Info.plist */,
@@ -138,6 +155,7 @@
 			children = (
 				C0BDBE941E4A34110037C942 /* 3rdplanet */,
 				C0AB25111E6F5EFC00EC6CF7 /* Resources */,
+				C06E17071E76F68900CD0214 /* Location */,
 				C0BDBE931E4A34110037C942 /* Products */,
 				C0FE03691E4D5D54007ED30C /* Frameworks */,
 			);
@@ -270,12 +288,15 @@
 				C0BDBED21E4B8A830037C942 /* WeatherViewController.swift in Sources */,
 				C0FE03601E4D5A01007ED30C /* CloudKitManager.swift in Sources */,
 				C0AB252B1E70CB1600EC6CF7 /* PostController.swift in Sources */,
+				C0AB25301E727BE300EC6CF7 /* Keys.swift in Sources */,
 				C0AB25151E6F602800EC6CF7 /* Comment.swift in Sources */,
 				C0FE03661E4D5AF2007ED30C /* CloudKitSyncable.swift in Sources */,
 				C0BDBE961E4A34110037C942 /* AppDelegate.swift in Sources */,
 				C0AB251B1E70795D00EC6CF7 /* PostExtension.swift in Sources */,
 				C0AB25171E6F604B00EC6CF7 /* Post.swift in Sources */,
+				C06E17091E76F6F800CD0214 /* LocationManager.swift in Sources */,
 				C0BDBED01E4B85D00037C942 /* WeatherController.swift in Sources */,
+				C0C343091E7A2B84000CC2CF /* ImageController.swift in Sources */,
 				C0AB25201E70C9D200EC6CF7 /* PhotoSelectViewController.swift in Sources */,
 				C0BDBECB1E4A7FAB0037C942 /* NetworkController.swift in Sources */,
 				C0AB25221E70C9F600EC6CF7 /* SearchResultsTableViewController.swift in Sources */,
@@ -407,6 +428,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.justzeus.3rdplanet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -425,6 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.justzeus.3rdplanet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
